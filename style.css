@@ -164,3 +164,20 @@ body {
         gap: 30px;
     }
 }
+
+/* Am Ende deiner style.css, innerhalb der @media-Klammer */
+
+@media (max-width: 768px) {
+    
+    /* ... (all deine bisherigen mobilen Stile bleiben hier) ... */
+
+    .client-logos {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* NEU: Füge diesen Block hinzu für mehr Abstand im Footer auf Mobilgeräten */
+    .main-footer {
+        padding-bottom: 30px; /* Erhöht den Abstand nach unten */
+    }
+}
