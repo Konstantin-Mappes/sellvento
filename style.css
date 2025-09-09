@@ -18,6 +18,16 @@ body {
     padding: 20px 40px;
 }
 
+/* NEU HINZUGEFÜGT: Stil für den Header auf den Unterseiten */
+.page-header {
+    padding: 20px 40px;
+}
+
+.page-header img {
+    height: 50px;
+}
+/* ENDE NEUER BLOCK */
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -58,7 +68,6 @@ body {
 .main-content {
     flex-grow: 1;
     display: flex;
-    /* KORREKTUR 1: Sorgt dafür, dass Logo und Text untereinander stehen */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -144,7 +153,6 @@ body {
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
-        /* KORREKTUR 2: Macht das Formular schmaler und zentriert es */
         max-width: 350px;
         margin: 0 auto;
     }
@@ -163,21 +171,8 @@ body {
         flex-direction: column;
         gap: 30px;
     }
-}
-
-/* Am Ende deiner style.css, innerhalb der @media-Klammer */
-
-@media (max-width: 768px) {
     
-    /* ... (all deine bisherigen mobilen Stile bleiben hier) ... */
-
-    .client-logos {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    /* NEU: Füge diesen Block hinzu für mehr Abstand im Footer auf Mobilgeräten */
     .main-footer {
-        padding-bottom: 30px; /* Erhöht den Abstand nach unten */
+        padding-bottom: 30px;
     }
 }
