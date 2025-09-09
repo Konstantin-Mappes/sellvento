@@ -58,6 +58,7 @@ body {
 .main-content {
     flex-grow: 1;
     display: flex;
+    flex-direction: column; /* Geändert für Mission Statement */
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -66,6 +67,16 @@ body {
 .main-logo {
     max-width: 80%;
     height: auto;
+}
+
+/* NEU: Stil für das Mission Statement */
+.mission-statement {
+    text-align: center;
+    max-width: 550px; /* Begrenzt die Breite auf großen Bildschirmen */
+    margin-top: 25px; /* Abstand zum Logo */
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
 }
 
 /* "Trusted by" Sektion */
@@ -89,7 +100,7 @@ body {
 }
 
 .client-logos img {
-    max-height: 80px; /* Deine Anpassung wurde übernommen */
+    max-height: 80px;
     width: auto;
 }
 
@@ -127,14 +138,16 @@ body {
     /* Mobiles Login-Feld unter dem Hauptlogo einblenden und stylen */
     .mobile-login {
         display: block;
-        padding: 0 20px 20px 20px; /* Abstand oben/unten/seitlich */
+        padding: 20px; /* Abstand oben/unten/seitlich angepasst */
     }
 
+    /* Mobiles Login-Formular schmaler und zentriert gestalten */
     .mobile-login form {
         flex-direction: column;
         align-items: stretch;
-        width: 100%;
         gap: 10px;
+        max-width: 350px; /* GEÄNDERT: Maximale Breite für schmaleres Design */
+        margin: 0 auto;    /* GEÄNDERT: Formular zentrieren */
     }
     
     .login-input, .login-button {
