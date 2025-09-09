@@ -105,7 +105,7 @@ body {
 }
 
 .client-logos img {
-    max-height: 40px; /* Einheitliche Höhe für ein sauberes Aussehen */
+    max-height: 80px; /* Einheitliche Höhe für ein sauberes Aussehen */
     width: auto;
 }
 
