@@ -28,17 +28,10 @@ body {
     margin-right: 15px;
 }
 
-.logo-text {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.2;
-}
-
 /* Login-Formular Stile */
 .login-container form {
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .login-input {
@@ -59,15 +52,6 @@ body {
     font-size: 14px;
     cursor: pointer;
     font-weight: bold;
-}
-
-.forgot-password {
-    font-size: 10px;
-    color: #888;
-    text-decoration: none;
-    position: absolute;
-    bottom: -15px;
-    right: 95px; /* Positioniert es relativ zum Formular */
 }
 
 /* Hauptbereich */
@@ -105,7 +89,7 @@ body {
 }
 
 .client-logos img {
-    max-height: 80px; /* Einheitliche Höhe für ein sauberes Aussehen */
+    max-height: 80px; /* Deine Anpassung wurde übernommen */
     width: auto;
 }
 
@@ -122,15 +106,31 @@ body {
     margin: 0 10px;
 }
 
+/* Standardmäßig das mobile Login-Feld ausblenden */
+.mobile-login {
+    display: none;
+}
+
+
 /* ----------- Mobile Ansicht (Responsive Design) ----------- */
 @media (max-width: 768px) {
     .main-header {
-        flex-direction: column;
-        gap: 20px;
+        justify-content: center; /* Logo zentrieren, da Login weg ist */
         padding: 20px;
     }
     
-    .login-container form {
+    /* Desktop-Login im Header auf Mobilgeräten ausblenden */
+    .desktop-login {
+        display: none;
+    }
+
+    /* Mobiles Login-Feld unter dem Hauptlogo einblenden und stylen */
+    .mobile-login {
+        display: block;
+        padding: 0 20px 20px 20px; /* Abstand oben/unten/seitlich */
+    }
+
+    .mobile-login form {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
@@ -143,19 +143,12 @@ body {
         box-sizing: border-box; /* Stellt sicher, dass Padding die Breite nicht sprengt */
     }
 
-    .forgot-password {
-        position: static; /* Setzt die absolute Positionierung zurück */
-        text-align: center;
-        margin-top: -5px;
-        margin-bottom: 5px;
-    }
-
     .main-logo {
-        max-width: 90%; /* Logo etwas größer auf Mobilgeräten */
+        max-width: 90%;
     }
 
     .client-logos {
-        flex-direction: column; /* Logos untereinander anordnen */
-        gap: 30px; /* Abstand anpassen */
+        flex-direction: column;
+        gap: 30px;
     }
 }
